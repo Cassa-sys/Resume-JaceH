@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-
+import { ref, type Ref } from 'vue'
 import Particles from '@/Components/Particles.vue'
+
+var isDarkMode: Ref<boolean, boolean> = ref(false)
+function toggleDarkMode() {
+  isDarkMode.value = !isDarkMode.value
+}
 </script>
 
 <template>
   <Particles class="particles" />
 
   <div class="flex">
-    <div class="container">
+    <div class="container" :class="{ dark: isDarkMode }">
       <header>
         <div class="wrapper">
           <nav>
@@ -20,6 +25,9 @@ import Particles from '@/Components/Particles.vue'
       <RouterView />
     </div>
   </div>
+  <button @click="toggleDarkMode()" class="toggleColor" :class="{ dark: isDarkMode }">
+    {{ isDarkMode ? '☀️' : '🌙' }}
+  </button>
 </template>
 
 <style scoped>
@@ -47,6 +55,15 @@ import Particles from '@/Components/Particles.vue'
 .container {
   width: 80%;
   height: 100vh;
-  background-color: white;
+}
+
+.toggleColor {
+  position: absolute;
+  right: 2.5vh;
+  bottom: 2.5vh;
+
+  margin: auto;
+
+  font-size: 3vh;
 }
 </style>
