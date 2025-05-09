@@ -73,6 +73,7 @@ img {
   background: no-repeat center center;
   background-size: 100%;
   object-fit: cover;
+  user-select: none;
 }
 
 </style>
