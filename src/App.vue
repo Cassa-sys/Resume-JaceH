@@ -16,10 +16,6 @@ function toggleDarkMode() {
     <div class="container" :class="{ dark: isDarkMode }">
       <header>
         <div class="wrapper">
-          <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/project">Project</RouterLink>
-          </nav>
         </div>
       </header>
       <RouterView />
@@ -53,7 +49,7 @@ function toggleDarkMode() {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   height: 100vh;
 }
 

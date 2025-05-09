@@ -1,13 +1,15 @@
 :root {
   --bg-color: #fff;
   --text-color: #000;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  --border-color: #f2f2f2;
+  --link-color: darkblue;
 }
 
 .dark {
   --bg-color: #121212;
   --text-color: #fff;
+  --border-color: #1b1b1b;
+  --link-color: plum;
 }
 
 .container {
@@ -16,6 +18,10 @@
   transition:
     background-color 0.3s,
     color 0.3s;
+}
+
+a:visited {
+  color: var(--link-color);
 }
 
 button {
