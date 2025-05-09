@@ -24,10 +24,6 @@ const particlesLoaded = async (container: any) => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
             onHover: {
               enable: true,
               mode: 'repulse',
